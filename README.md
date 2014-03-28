@@ -65,7 +65,7 @@ Mixins provide an easy way to 'mixin' css classes into other css. Mixins in LESS
     .rounded-shape(999px);
 }
 
-.rounded-square(@radius){
+.rounded-square(@radius: 30px){
     .rounded-shape(@radius);
 }
 ```
@@ -78,15 +78,38 @@ Mixins provide an easy way to 'mixin' css classes into other css. Mixins in LESS
 }
 
 #shape2{
-    .rounded-square(60px);
+    .rounded-square;
 }
 
 #shape3{
-    .rounded-square(40px);
+    .rounded-square(30px);
 }
 ```
 
+###Step 4: Operations, functions, and nesting
+Sometimes we want something to be a different pixel size or different color without really knowing the value we want to use. On a hover effect, we may just want the color to be darker or lighter or we may want the border to get wider or more narrow. This is where operations come in handy. LESS even has built in functions that can handle these operations for you.
 
+* Create a border color variable that is a different color than the background color. You can use a LESS color function or you could use an operation to create the color.
+
+
+```less
+@border-color: @default-theme - #222;
+
+//or
+
+@border-color: darken(@default-theme, 20%);
+```
+Nesting is a great way to use less code(no pun intended). At times you may need to chain selectors to capture a particular DOM element. Long chains in CSS may be hard to read and understand. With nesting, you can nest selectors in parent selectors. This creates a more visually appealing chaining and easier to read css.
+
+* Create a hover effect for one of your elements. Nested selectors can access the parent element with the &.
+
+```less
+.shape{
+    &:hover{
+        background: @light-red;
+    }
+}
+```
 
 
 
