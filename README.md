@@ -6,7 +6,7 @@ LESS
 This is a really simple example of how to use basic LESS. Why do more when you can do LESS?
 
 ###Step 1: Creating, compiling and watching your LESS file
-Fairly simple step, but done incorrectly and it could result in some major frustration. If your lESS isn't compiling to the right sheet, you will never see your changes!!!
+Fairly simple step, but done incorrectly and it could result in some major frustration. If your LESS isn't compiling to the right sheet, you will never see your changes!!!
 * If you haven't already, go ahead and install the LESS module:
 
 ```shell
