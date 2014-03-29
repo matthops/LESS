@@ -28,6 +28,7 @@ npm install less -g
 ```shell
 lessc style.less > style.css
 ```
+* To add a watcher, do an npm install on the package.json and run the grunt file with 'grunt watch'. Make sure to change the grunt file source files to the files that you are trying to watch and compile to.
 
 ###Step 2: Variables
 Static CSS isn't very modular or flexible. We are going to start using LESS to help keep our CSS DRY'er and cleaner.
